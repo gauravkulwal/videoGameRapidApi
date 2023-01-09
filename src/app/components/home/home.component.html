@@ -1,0 +1,35 @@
+<select class="" [(ngModel)]="order" name="order" (ngModelChange)="searchGames($event)">
+    <option value="undefined" selected disabled>Sort by option</option>
+    <option  value="{{option}}" *ngFor="let option of sorts">{{option}}</option>
+    
+</select>
+
+<br>
+<div class="game-container">
+    <ng-container  *ngFor="let game of games">
+        <div class="game" >
+            <div class="game-thumbnail">
+                <img 
+                *ngIf="game.background_image"
+                src="{{game.background_image}}" alt="" class="game-image">
+<p *ngIf="!(game.background_image)">No image</p>
+            </div>
+            <div class="description">
+                <h6 class="text-center">{{game.name}}</h6>
+                <div class="slug">
+                    <img *ngFor="let gamePlatform of game.parent_platforms"
+                    src="assets/platform/{{gamePlatform.platform.slug}}.jpg"
+                    class="platform ">
+                </div>
+     
+              
+                 
+           
+            </div>
+            
+        </div>
+    </ng-container>
+    
+ 
+   
+</div>

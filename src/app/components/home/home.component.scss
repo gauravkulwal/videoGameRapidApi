@@ -1,0 +1,45 @@
+.game{
+    width:260px;
+    height: 300px;
+   
+   border: 5px solid  rgb(0, 0, 0);
+    margin: 10px;
+    border-radius: 5px;
+}
+.game-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+.game:hover{
+    transform:  translateY(-3px);
+    box-shadow: 4px 4px 4px 4px black;
+}
+.game-image{
+    width:230px ;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+.platform{
+    width:20px;
+    height: 20px;
+    margin:5px
+
+
+}
+.slug{
+    margin-left: 20px;
+}
+select{
+   width: 200px;
+   margin-left: 50px;
+   height: 32px;
+   margin-bottom: 20px;
+   border-radius: 5px;
+   background-color: black;
+   color: white;
+   
+}
